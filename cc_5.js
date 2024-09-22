@@ -38,9 +38,19 @@ console.log (`Order placed by $(customerName)`);
 }
 // Function to calculate total for an order
 function calculateOrderTotal(order){
-    return order.items.reduce((tota, item)=> {
+    return order.items.reduce((total, item)=> {
       const product = inventory.find(prod => prod.name === item.name);  
       return total + (product.price * item.quantity);
     }, 0);
     }
     
+// Function to mark an order as completed
+function completeOrder(customerName) {
+    const order = orders.find(order => order.customerName === customerName && order.status === "Pending");
+    if (order) {
+        order.status = "Completed";
+        console.log(`Order for ${customerName} marked as completed.`);
+    } else {
+        console.error(`Order not found for ${customerName}`);
+    }
+}
