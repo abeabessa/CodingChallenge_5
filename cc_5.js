@@ -2,10 +2,10 @@ cc_5.js
 
 // Inventory Array of Product Objects
 const inventory = [
-  {name: 'Espresso', price: '2', quantity: '10'},
-  {name: 'Affogato', price: '6', quantity: '5'},
+  {name: 'Espresso', price: '3', quantity: '10'},
   {name: 'Latte', price: '4', quantity: '5'},
-  {name: 'Cappucino', price: '4', quantity: '6'},
+  {name: 'Cappuccino', price: '4', quantity: '6'},
+  {name: 'Mocha', price: '5', quantity: '4'},
 ];
 
 // Orders array
@@ -36,3 +36,4 @@ const newOrder = {
 orders.push(newOrder);
 console.log (`Order placed by $(customerName)`);
 }
+
