@@ -36,4 +36,11 @@ const newOrder = {
 orders.push(newOrder);
 console.log (`Order placed by $(customerName)`);
 }
-
+// Function to calculate total for an order
+function calculateOrderTotal(order){
+    return order.items.reduce((tota, item)=> {
+      const product = inventory.find(prod => prod.name === item.name);  
+      return total + (product.price * item.quantity);
+    }, 0);
+    }
+    
