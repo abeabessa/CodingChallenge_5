@@ -63,3 +63,22 @@ function checkPendingOrders() {
         }
     });
 }
+
+// Example 1: 
+placeOrder ("Beatriz", [
+    {name: "Espresso", quantity: 1},
+    {name: "Latte", quantity: 2}
+]);
+
+// Check Order
+checkPendingOrders ();
+
+// Total of the order
+const lastOrderTotal = calculateOrderTotal(orders[orders.length - 1]);
+console.log(`Total for last order: $${lastOrderTotal}`);
+
+// Completed Order
+completeOrder("Beatriz");
+
+// Check orders 2nd time
+checkPendingOrders();
