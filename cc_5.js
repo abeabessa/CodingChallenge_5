@@ -43,7 +43,7 @@ function calculateOrderTotal(order){
       return total + (product.price * item.quantity);
     }, 0);
     }
-    
+
 // Function to mark an order as completed
 function completeOrder(customerName) {
     const order = orders.find(order => order.customerName === customerName && order.status === "Pending");
@@ -53,4 +53,13 @@ function completeOrder(customerName) {
     } else {
         console.error(`Order not found for ${customerName}`);
     }
+}
+
+// Function to check pending orders
+function checkPendingOrders() {
+    orders.forEach(order => {
+        if (order.status === "Pending") {
+            console.log(`Pending order for ${order.customerName}:`, order.items);
+        }
+    });
 }
