@@ -7,3 +7,6 @@ const inventory = [
   {name: 'Latte', price: '4', quantity: '5'},
   {name: 'Cappucino', price: '4', quantity: '6'},
 ];
+
+// Orders array
+const orders = [];
